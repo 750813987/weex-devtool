@@ -17,7 +17,6 @@ function getChromeAppName() {
             return 'google-chrome';
     }
 }
-<<<<<<< HEAD
 
 function getWebpackConfig() {
     var webpackconfig = require(path.join(process.cwd(), 'webpack.config.js'));
