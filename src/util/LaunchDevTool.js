@@ -19,8 +19,8 @@ function getChromeAppName() {
 }
 
 function getWebpackConfig() {
-    var webpackconfig = require(path.join(process.cwd(), 'webpack.config.js'));
-    var projectPackagejson = require(path.join(process.cwd(), 'package.json'));
+    var webpackconfig = require(Path.join(process.cwd(), 'webpack.config.js'));
+    var projectPackagejson = require(Path.join(process.cwd(), 'package.json'));
     var devIndex = projectPackagejson.qapConfig !== undefined &&
         projectPackagejson.qapConfig.webpack !== undefined &&
         projectPackagejson.qapConfig.devIndex !== undefined ?
