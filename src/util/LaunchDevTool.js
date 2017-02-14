@@ -17,6 +17,7 @@ function getChromeAppName() {
             return 'google-chrome';
     }
 }
+<<<<<<< HEAD
 
 function getWebpackConfig() {
     var webpackconfig = require(path.join(process.cwd(), 'webpack.config.js'));
@@ -41,6 +42,28 @@ let launchDevTools = module.exports = function(ip, port) {
 
         fs.readFile(Path.join(work_path, 'Manifest.xml'), 'utf8', function(err, contents) {
             var appValid = 'invalid';
+// =======
+// let launchDevTools = module.exports = function (ip, port) {
+//     return new Promise(function (resolve, reject) {
+//         var debuggerURL = 'http://' + (ip || 'localhost') + ':' + port + '/';
+//         console.log('Launching Dev Tools...');
+//         if (process.platform === 'darwin') {
+//             try {
+//                 // Try our best to reuse existing tab
+//                 // on OS X Google Chrome with AppleScript
+//                 ExecSync('ps cax | grep "Google Chrome"');
+//                 ExecSync(
+//                     'osascript "' +
+//                     Path.resolve(__dirname, '../../common/chrome.applescript') +
+//                     '" ' + debuggerURL
+//                 );
+//                 return;
+//             } catch (err) {
+//                 // Ignore errors.
+//             }
+//         }
+//         opn(debuggerURL, {app: [getChromeAppName()]}, function (err) {
+// >>>>>>> upstream/master
             if (err) {
                 //console.log('读取Manifest.xml发生错误：' + err)
                 fs.readJson(Path.join(work_path, 'qap.json'), function(err, packageObj) {
